@@ -5,10 +5,15 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 // Middleware
-app.use(express.json());
 app.use(
-  cors(),
+  cors({
+    origin: "https://polaris-app-rouge.vercel.app",
+    methods: ["GET", "POST", "OPTIONS"],
+    credentials: true,
+  })
 );
+
+app.options("*", cors());
 
 const PORT = process.env.PORT || 5000;
 
