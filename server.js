@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 // Environment variables
 const userEmail = process.env.EMAIL_USER;
-const pass = process.env.EMAIL_PASS;
+//const pass = process.env.EMAIL_PASS;
 
 // Verify env vars exist
 if (!userEmail || !pass) {
